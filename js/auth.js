@@ -123,7 +123,7 @@ signupForm.addEventListener("submit", async function (event) {
                 data: {
                     full_name: fullName
                 },
-                emailRedirectTo: window.location.origin + "/login.html"
+                emailRedirectTo: "https://keywell4-lab.github.io/CampusSafe-website/html/login.html"
             }
         });
 
