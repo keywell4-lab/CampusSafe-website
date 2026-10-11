@@ -246,3 +246,78 @@ loginForm.addEventListener("submit", async function (event) {
 // ==========================================
 
 console.log("CampusSafe authentication system loaded.");
+
+
+
+// ==========================================
+// FORGOT PASSWORD
+// ==========================================
+
+// Find the Forgot Password button.
+const forgotPasswordBtn =
+    document.getElementById("forgotPasswordBtn");
+
+// Run this only if the button exists on the page.
+if (forgotPasswordBtn) {
+
+    forgotPasswordBtn.addEventListener("click", async function () {
+
+        // Read the email from the login form.
+        const email =
+            document.getElementById("loginEmail").value.trim();
+
+        // The student must enter their email first.
+        if (!email) {
+            displayMessage(
+                "Enter your email address above, then click Forgot Password.",
+                true
+            );
+
+            document.getElementById("loginEmail").focus();
+
+            return;
+        }
+
+        // Prevent repeated clicks while sending the email.
+        forgotPasswordBtn.disabled = true;
+
+        displayMessage("Sending password reset instructions...");
+
+        try {
+
+            // Ask Supabase to send the password reset email.
+            const { error } =
+                await supabase.auth.resetPasswordForEmail(email, {
+                    redirectTo:
+                        "https://keywell4-lab.github.io/CampusSafe-website/html/reset-password.html"
+                });
+
+            // Display any error returned by Supabase.
+            if (error) {
+                throw error;
+            }
+
+            // Show a general message for privacy.
+            displayMessage(
+                "If an account exists for that email, password reset instructions will be sent. Check your inbox and spam folder."
+            );
+
+        } catch (error) {
+
+            console.error("Password reset request error:", error);
+
+            displayMessage(
+                error.message ||
+                "Could not send the reset email. Please try again.",
+                true
+            );
+
+        } finally {
+
+            // Allow another attempt.
+            forgotPasswordBtn.disabled = false;
+        }
+
+    });
+
+}
