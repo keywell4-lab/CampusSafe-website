@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic page information -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>Report an Incident | CampusSafe</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Global JavaScript -->
+    <script src="../js/script.js" defer></script>
+
+    <!-- Report form JavaScript -->
+    <script type="module" src="../js/report.js" ></script>
+
+    <script type="module" src="../js/session.js"></script>
+
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+        NAVIGATION BAR
+        ================================================= -->
+
+    <header class="navbar">
+
+        <!-- Website logo -->
+        <a href="index.html" class="logo">
+            <img src="https://i.ibb.co/WWnf8pVp/Murang-a-University-of-Technology.png" alt="MUT logo">
+            Campus<span>Safe</span>
+        </a>
+
+
+        <!-- Navigation links -->
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="report.html" class="active">
+                Report
+            </a>
+
+            <a href="lost-found.html">
+                Lost & Found
+            </a>
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+
+        <!-- Light / dark mode button -->
+        <button
+            id="themeBtn"
+            class="theme-btn"
+            type="button"
+            aria-label="Change theme">
+
+            🌙
+
+        </button>
+
+        
+<!-- Student logout button -->
+<button type="button" id="logoutBtn" class="logout-btn">
+    Logout
+</button>
+
+
+
+
+    </header>
+
+
+
+    <!-- =================================================
+        MAIN CONTENT
+        ================================================= -->
+
+    <main>
+
+
+        <!-- =================================================
+            PAGE INTRODUCTION
+            ================================================= -->
+
+        <section class="page-header">
+
+            <div class="page-header-content">
+
+                <p class="section-label">
+                    CAMPUS SAFETY
+                </p>
+
+                <h1>
+                    Report an Incident
+                </h1>
+
+                <p>
+                    Help make our campus safer by reporting
+                    incidents, suspicious activities, or
+                    other safety concerns.
+                </p>
+
+            </div>
+                                    
+        </section>
+
+
+
+        <!-- =================================================
+            REPORT FORM SECTION
+            ================================================= -->
+
+        <section class="report-section">
+
+
+            <!-- Information panel -->
+            <div class="report-info">
+
+                <p class="section-label">
+                    BEFORE YOU REPORT
+                </p>
+
+                <h2>
+                    Your report matters.
+                </h2>
+
+                <p>
+                    Provide accurate information about the
+                    incident so that the appropriate people
+                    can understand and respond to the situation.
+                </p>
+
+
+                <!-- Safety notice -->
+                <div class="notice-box">
+
+                    <strong>
+                        Important:
+                    </strong>
+
+                    <p>
+                        If you are currently facing an immediate
+                        danger or medical emergency, use the
+                        Emergency page instead of waiting for
+                        a report to be processed.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick emergency link -->
+                <a
+                    href="emergency.html"
+                    class="btn secondary-btn">
+
+                    Emergency Help
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                REPORT FORM
+                ================================================= -->
+
+            <div class="form-container">
+
+                <form id="reportForm">
+
+
+                    <!-- Form heading -->
+                    <div class="form-heading">
+
+                        <h2>
+                            Incident Details
+                        </h2>
+
+                        <p>
+                            Please complete the fields below.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        FULL NAME
+                        ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        REGISTRATION NUMBER
+                        ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="regNumber">
+                            Registration Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="regNumber"
+                            name="regNumber"
+                            placeholder="Enter your registration number"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        INCIDENT TYPE
+                        ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="incidentType">
+                            Type of Incident
+                        </label>
+
+                        <select
+                            id="incidentType"
+                            name="report_type"
+                            required>
+
+                            <option value="">
+                                Select incident type
+                            </option>
+
+                            <option value="theft">
+                                Theft
+                            </option>
+
+                            <option value="harassment">
+                                Harassment
+                            </option>
+
+                            <option value="accident">
+                                Accident
+                            </option>
+
+                            <option value="suspicious">
+                                Suspicious Activity
+                            </option>
+
+                            <option value="violence">
+                                Violence
+                            </option>
+
+                            <option value="fire">
+                                Fire
+                            </option>
+
+                            <option value="medical">
+                                Medical Emergency
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        LOCATION
+                        ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Location of Incident
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="Where did this happen? e.g. Library, Hostel, Lecture Hall"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        DATE
+                        ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="incidentDate">
+                            Date of Incident
+                        </label>
+
+                        <input
+                            type="date"
+                            id="incidentDate"
+                            name="incidentDate"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        TIME
+                        ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="incidentTime">
+                            Approximate Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="incidentTime"
+                            name="incidentTime"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        DESCRIPTION
+                        ================================================= -->
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            Description of Incident
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="6"
+                            placeholder="Describe what happened..."
+                            required></textarea>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        ANONYMOUS REPORT OPTION
+                        ================================================= -->
+
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="anonymous"
+                            name="anonymous">
+
+                        <label for="anonymous">
+                            Submit this report anonymously
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                        SUBMIT BUTTON
+                        ================================================= -->
+
+                    <button
+                        type="submit"
+                        class="btn primary-btn submit-btn">
+
+                        Submit Report
+
+                    </button>
+
+
+                    <!-- =================================================
+                        FORM MESSAGE
+                        ================================================= -->
+
+                    <div
+                        id="formMessage"
+                        class="form-message"
+                        aria-live="polite">
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="section" id="reported-incidents">
+            <div class="section-heading">
+                <p class="section-label">CAMPUS LISTINGS</p>
+                <h2>Recently Reported Incidents</h2>
+                <p>Recent incidents reported to campus safety.</p>
+            </div>
+
+            <div id="reportsList" class="cards"></div>
+        </section>
+
+    </main>
+
+
+
+    <!-- =================================================
+        FOOTER
+        ================================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <!-- Footer introduction -->
+            <div>
+
+                <a href="index.html" class="logo">
+                    Campus<span>Safe</span>
+                </a>
+
+                <p>
+                    Building a safer campus community through
+                    awareness, reporting, and quick action.
+                </p>
+
+            </div>
+
+
+            <!-- Quick links -->
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="report.html">
+                    Report
+                </a>
+
+                <a href="lost-found.html">
+                    Lost & Found
+                </a>
+
+                <a href="emergency.html">
+                    Emergency
+                </a>
+
+            </div>
+
+
+            <!-- Safety links -->
+            <div class="footer-links">
+
+                <h3>
+                    Safety
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="report.html">
+                    Report a Concern
+                </a>
+
+                <a href="emergency.html">
+                    Emergency Contacts
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CampusSafe. Campus Safety & Emergency Portal.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

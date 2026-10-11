@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic page information -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title shown in the browser tab -->
+    <title>Campus Safety Portal</title>
+
+    <!-- Connect the main stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Connect the JavaScript file -->
+    <script src="../js/script.js"defer></script>
+    <script type="module" src="../js/session.js"></script>
+</head>
+
+<body>
+
+    <!-- =========================
+        NAVIGATION BAR
+        ========================= -->
+    <header class="navbar">
+
+        <!-- Website logo/name -->
+        <a href="index.html" class="logo">
+
+            <img src="https://i.ibb.co/WWnf8pVp/Murang-a-University-of-Technology.png" alt="MUT logo">
+            Campus<span>Safe</span>
+        </a>
+
+        <!-- Navigation links -->
+        <nav class="nav-links">
+
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="report.html">
+                Report
+            </a>
+
+            <a href="lost-found.html">
+                Lost & Found
+            </a>
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+        <!-- Dark/light mode button -->
+        <button id="themeBtn" class="theme-btn" type="button">
+            🌙
+        </button>
+
+        <button type="button" id="logoutBtn" class="logout-btn">
+                Logout
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+        HERO SECTION
+        ========================= -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-image">
+                <img src="https://i.ibb.co/gbhsbG9x/unnamed.webp" alt="MUT Campus">
+            </div>
+
+            <div class="hero-content">
+
+                <!-- Small introductory text -->
+                <p class="hero-tag">
+                    CAMPUS SAFETY & EMERGENCY PORTAL
+                </p>
+
+                <!-- Main heading -->
+                <h1>
+                    Your safety matters.
+                    <span>Speak up. Stay safe.</span>
+                </h1>
+
+                <!-- Introduction -->
+                <p class="hero-text">
+                    A simple campus platform for reporting incidents,
+                    finding lost items, accessing emergency assistance,
+                    and promoting a safer university community.
+                </p>
+
+                <!-- Main action buttons -->
+                <div class="hero-buttons">
+
+                    <a href="report.html" class="btn secondary-btn">
+                        Report an Incident
+                    </a>
+
+                    <a href="emergency.html" class="btn secondary-btn">
+                        Emergency Help
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+            QUICK ACTIONS
+            ========================= -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    QUICK ACTIONS
+                </p>
+
+                <h2>
+                    What do you need?
+                </h2>
+
+                <p>
+                    Access the most important safety services from one place.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <!-- Report card -->
+                <article class="card">
+
+                    <div class="card-icon">
+                        🚨
+                    </div>
+
+                    <h3>
+                        Report an Incident
+                    </h3>
+
+                    <p>
+                        Report suspicious activity, accidents,
+                        harassment, theft, or other safety concerns.
+                    </p>
+
+                    <a href="report.html" class="btn secondary-btn">
+                        Make a Report 
+                    </a>
+
+                </article>
+
+
+                <!-- Lost and found card -->
+                <article class="card">
+
+                    <div class="card-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Lost & Found
+                    </h3>
+
+                    <p>
+                        Report lost belongings or help other students
+                        find items they have misplaced.
+                    </p>
+
+                    <a href="lost-found.html" class="btn secondary-btn">
+                        View Lost & Found 
+                    </a>
+
+                </article>
+
+
+                <!-- Emergency card -->
+                <article class="card">
+
+                    <div class="card-icon">
+                        🆘
+                    </div>
+
+                    <h3>
+                        Emergency Help
+                    </h3>
+
+                    <p>
+                        Quickly access important emergency contacts
+                        and safety instructions to be safe.
+                    </p>
+
+                    <a href="emergency.html" class="btn secondary-btn">
+                        Get Emergency Help 
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+            SAFETY MESSAGE
+            ========================= -->
+        <section class="safety-banner">
+
+            <div>
+
+                <p class="section-label">
+                    CAMPUS SAFETY
+                </p>
+
+                <h2>
+                    See something? Say something.
+                </h2>
+
+                <p>
+                    Small actions can make a big difference.
+                    Report safety concerns early and help protect
+                    yourself and the people around you.
+                </p>
+
+            </div>
+
+            <a href="report.html" class="btn secondary-btn">
+                Make a Report
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+        FOOTER
+        ========================= -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    Campus<span>Safe</span>
+                </a>
+
+                <p>
+                    Building a safer campus community through
+                    awareness, reporting, and quick action.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="report.html">
+                    Report
+                </a>
+
+                <a href="lost-found.html">
+                    Lost & Found
+                </a>
+
+                <a href="emergency.html">
+                    Emergency
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Safety
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="report.html">
+                    Report a Concern
+                </a>
+
+                <a href="emergency.html">
+                    Emergency Contacts
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CampusSafe. Campus Safety & Emergency Portal.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+

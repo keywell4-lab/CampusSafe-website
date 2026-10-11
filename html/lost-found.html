@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic page information -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>Lost & Found | CampusSafe</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Global JavaScript -->
+    <script src="../js/script.js"defer></script>
+
+    <!-- Lost & Found JavaScript -->
+    <script type="module" src="../js/lost-found.js"defer></script>
+
+    <script type="module" src="../js/session.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+        NAVIGATION BAR
+    ================================================= -->
+
+    <header class="navbar">
+
+        <!-- Website logo -->
+        <a href="index.html" class="logo">
+            <img src="https://i.ibb.co/WWnf8pVp/Murang-a-University-of-Technology.png" alt="MUT logo">
+            Campus<span>Safe</span>
+        </a>
+
+
+        <!-- Navigation links -->
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="report.html">
+                Report
+            </a>
+
+            <a href="lost-found.html" class="active">
+                Lost & Found
+            </a>
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+
+        <!-- Light / dark mode button -->
+        <button
+            id="themeBtn"
+            class="theme-btn"
+            type="button"
+            aria-label="Change theme">
+
+            🌙
+
+        </button>
+
+        
+<!-- Student logout button -->
+<button type="button" id="logoutBtn" class="logout-btn">
+    Logout
+</button>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+        MAIN CONTENT
+        ================================================= -->
+
+    <main>
+
+
+        <!-- =================================================
+            PAGE HEADER
+            ================================================= -->
+
+        <section class="page-header">
+
+            <div class="page-header-content">
+
+                <p class="section-label">
+                    CAMPUS COMMUNITY
+                </p>
+
+                <h1>
+                    Lost & Found
+                </h1>
+
+                <p>
+                    Report items you have lost or found and help
+                    return belongings to their rightful owners.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+            ACTION BUTTONS
+            ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    LOST OR FOUND SOMETHING?
+                </p>
+
+                <h2>
+                    Help reconnect people with their belongings.
+                </h2>
+
+                <p>
+                    Every item reported here can help another
+                    student recover something important.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- =================================================
+                    REPORT LOST ITEM
+                    ================================================= -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+                        🔍
+                    </div>
+
+                    <h3>
+                        I Lost Something
+                    </h3>
+
+                    <p>
+                        Tell the campus community about an item
+                        you have lost and provide details that
+                        can help identify it.
+                    </p>
+
+                    <a
+                        href="#lost-item-form"
+                        class="btn secondary-btn">
+
+                        Report Lost Item
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                    REPORT FOUND ITEM
+                    ================================================= -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+                        🎒
+                    </div>
+
+                    <h3>
+                        I Found Something
+                    </h3>
+
+                    <p>
+                        Found an item on campus? Report it here
+                        so its owner has a better chance of
+                        getting it back.
+                    </p>
+
+                    <a
+                        href="#found-item-form"
+                        class="btn secondary-btn">
+
+                        Report Found Item
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =================================================
+                    VIEW REPORTED ITEMS
+                    ================================================= -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        View Items
+                    </h3>
+
+                    <p>
+                        Check the items currently reported by
+                        members of the campus community.
+                    </p>
+
+                    <a
+                        href="#reported-items"
+                        class="btn secondary-btn">
+
+                        View Reported Items 
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+            LOST ITEM FORM
+            ================================================= -->
+
+        <section
+            class="report-section"
+            id="lost-item-form">
+
+            <div class="report-info">
+
+                <p class="section-label">
+                    LOST ITEM
+                </p>
+
+                <h2>
+                    Report a lost item
+                </h2>
+
+                <p>
+                    Provide as much information as possible.
+                    Avoid sharing sensitive personal information.
+                </p>
+
+            </div>
+
+
+            <div class="form-container">
+
+                <form id="lostItemForm">
+
+
+                    <!-- Item name -->
+                    <div class="form-group">
+
+                        <label for="lostItemName">
+                            Item Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lostItemName"
+                            name="lostItemName"
+                            placeholder="e.g. Black backpack"
+                            required>
+
+                    </div>
+
+
+                    <!-- Item category -->
+                    <div class="form-group">
+
+                        <label for="lostCategory">
+                            Category
+                        </label>
+
+                        <select
+                            id="lostCategory"
+                            name="lostCategory"
+                            required>
+
+                            <option value="">
+                                Select category
+                            </option>
+
+                            <option value="electronics">
+                                Electronics
+                            </option>
+
+                            <option value="documents">
+                                Documents
+                            </option>
+
+                            <option value="clothing">
+                                Clothing
+                            </option>
+
+                            <option value="bag">
+                                Bags
+                            </option>
+
+                            <option value="keys">
+                                Keys
+                            </option>
+
+                            <option value="wallet">
+                                Wallet / Purse
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Location -->
+                    <div class="form-group">
+
+                        <label for="lostLocation">
+                            Last Seen Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lostLocation"
+                            name="lostLocation"
+                            placeholder="e.g. Main Library"
+                            required>
+
+                    </div>
+
+
+                    <!-- Date -->
+                    <div class="form-group">
+
+                        <label for="lostDate">
+                            Date Lost
+                        </label>
+
+                        <input
+                            type="date"
+                            id="lostDate"
+                            name="lostDate"
+                            required>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="form-group">
+
+                        <label for="lostDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="lostDescription"
+                            name="lostDescription"
+                            rows="5"
+                            placeholder="Describe the item, including useful identifying details..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <!-- Contact -->
+                    <div class="form-group">
+
+                        <label for="lostContact">
+                            Contact Information
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lostContact"
+                            name="lostContact"
+                            placeholder="Phone number or other safe contact method"
+                            required>
+
+                    </div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="btn primary-btn submit-btn">
+
+                        Submit Lost Item
+
+                    </button>
+
+
+                    <!-- Form message -->
+                    <div
+                        id="lostFormMessage"
+                        class="form-message"
+                        aria-live="polite">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+            FOUND ITEM FORM
+            ================================================= -->
+
+        <section
+            class="report-section"
+            id="found-item-form">
+
+            <div class="report-info">
+
+                <p class="section-label">
+                    FOUND ITEM
+                </p>
+
+                <h2>
+                    Report an item you found
+                </h2>
+
+                <p>
+                    Tell others where the item was found and
+                    provide enough information to help identify it.
+                </p>
+
+            </div>
+
+
+            <div class="form-container">
+
+                <form id="foundItemForm">
+
+
+                    <!-- Item name -->
+                    <div class="form-group">
+
+                        <label for="foundItemName">
+                            Item Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="foundItemName"
+                            name="foundItemName"
+                            placeholder="e.g. Student ID card"
+                            required>
+
+                    </div>
+
+
+                    <!-- Category -->
+                    <div class="form-group">
+
+                        <label for="foundCategory">
+                            Category
+                        </label>
+
+                        <select
+                            id="foundCategory"
+                            name="foundCategory"
+                            required>
+
+                            <option value="">
+                                Select category
+                            </option>
+
+                            <option value="electronics">
+                                Electronics
+                            </option>
+
+                            <option value="documents">
+                                Documents
+                            </option>
+
+                            <option value="clothing">
+                                Clothing
+                            </option>
+
+                            <option value="bag">
+                                Bags
+                            </option>
+
+                            <option value="keys">
+                                Keys
+                            </option>
+
+                            <option value="wallet">
+                                Wallet / Purse
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Location -->
+                    <div class="form-group">
+
+                        <label for="foundLocation">
+                            Location Found
+                        </label>
+
+                        <input
+                            type="text"
+                            id="foundLocation"
+                            name="foundLocation"
+                            placeholder="e.g. Cafeteria"
+                            required>
+
+                    </div>
+
+
+                    <!-- Date -->
+                    <div class="form-group">
+
+                        <label for="foundDate">
+                            Date Found
+                        </label>
+
+                        <input
+                            type="date"
+                            id="foundDate"
+                            name="foundDate"
+                            required>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="form-group">
+
+                        <label for="foundDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="foundDescription"
+                            name="foundDescription"
+                            rows="5"
+                            placeholder="Describe the item and where you found it..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <!-- Contact -->
+                    <div class="form-group">
+
+                        <label for="foundContact">
+                            Contact Information
+                        </label>
+
+                        <input
+                            type="text"
+                            id="foundContact"
+                            name="foundContact"
+                            placeholder="Phone number or other safe contact method"
+                            required>
+
+                    </div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="btn primary-btn submit-btn">
+
+                        Submit Found Item
+
+                    </button>
+
+
+                    <!-- Form message -->
+                    <div
+                        id="foundFormMessage"
+                        class="form-message"
+                        aria-live="polite">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+            REPORTED ITEMS
+            ================================================= -->
+
+        <section
+            class="section"
+            id="reported-items">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    CAMPUS LISTINGS
+                </p>
+
+                <h2>
+                    Recently Reported Items
+                </h2>
+
+                <p>
+                    Items submitted through this portal will
+                    appear here.
+                </p>
+
+            </div>
+
+
+            <!-- JavaScript will display saved items here -->
+            <div
+                id="lostFoundList"
+                class="cards">
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+        FOOTER
+        ================================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <!-- Footer introduction -->
+            <div>
+
+                <a href="index.html" class="logo">
+                    Campus<span>Safe</span>
+                </a>
+
+                <p>
+                    Building a safer campus community through
+                    awareness, reporting, and quick action.
+                </p>
+
+            </div>
+
+
+            <!-- Quick links -->
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="report.html">
+                    Report
+                </a>
+
+                <a href="lost-found.html">
+                    Lost & Found
+                </a>
+
+                <a href="emergency.html">
+                    Emergency
+                </a>
+
+            </div>
+
+
+            <!-- Safety links -->
+            <div class="footer-links">
+
+                <h3>
+                    Safety
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="report.html">
+                    Report a Concern
+                </a>
+
+                <a href="emergency.html">
+                    Emergency Contacts
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CampusSafe. Campus Safety & Emergency Portal.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>
