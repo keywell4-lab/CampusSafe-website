@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateThemeButton() {
 
         if (document.body.classList.contains("dark-mode")) {
-            themeBtn.textContent = "☀️Light Mode";
+            themeBtn.textContent = "☀️";
         } else {
-            themeBtn.textContent = "🌙Dark Mode";
+            themeBtn.textContent = "🌙";
         }
 
     }
