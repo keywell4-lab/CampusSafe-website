@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
     updateThemeButton();
 
 
-    // =================================================
+
     // DARK / LIGHT MODE
-    // =================================================
+
 
     themeBtn.addEventListener("click", function () {
 
