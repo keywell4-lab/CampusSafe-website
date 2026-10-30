@@ -1670,3 +1670,23 @@ body:has(.auth-container) > header nav a.logo img {
     box-shadow: none;
 }
 
+
+/* FINAL THEME BUTTON FIX */
+.theme-btn {
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    flex: 0 0 40px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: transparent !important;
+    border: none !important;
+    font-size: 22px !important;
+    cursor: pointer;
+}
