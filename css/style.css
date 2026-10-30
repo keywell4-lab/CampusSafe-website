@@ -109,17 +109,21 @@ button {
    ===================================================== */
 
 .theme-btn {
-    
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    font-size: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .theme-btn:hover {
-    background: #e5e7eb;
-    transform: translateY(-2px);
+    transform: scale(1.1);
 }
-
 
 /* =====================================================
 4. HERO SECTION - HOME
