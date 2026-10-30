@@ -109,13 +109,7 @@ button {
    ===================================================== */
 
 .theme-btn {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #d1d5db;
-    border-radius: 50%;
-    background: #f9fafb;
-    font-size: 1.1rem;
-    display: flex;
+    
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
@@ -123,7 +117,7 @@ button {
 
 .theme-btn:hover {
     background: #e5e7eb;
-    transform: rotate(15deg);
+    transform: translateY(-2px);
 }
 
 
